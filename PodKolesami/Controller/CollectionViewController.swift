@@ -8,17 +8,12 @@
 
 import UIKit
 
-//private let reuseIdentifier = "CollectionCell"
-
 class CollectionViewController: UICollectionViewController {
     
     private var category: [Category] = []
-//    private var parsingCatygoryes = ParsingCategoryes()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        parsingCatygoryes.loadCategory()
-//        category = parsingCatygoryes.category
         loadCategory()
     }
     

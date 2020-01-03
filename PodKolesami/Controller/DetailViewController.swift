@@ -21,7 +21,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var secondParam: UILabel!
     @IBOutlet weak var textLabel: UILabel!
     
-    var annousements: AnnoucementOnVC?
+    private var annousements: AnnoucementOnVC?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,7 @@ class DetailViewController: UIViewController {
             }
         }.resume()
     }
-    func loadViewForDetailViewController() {
+    private func loadViewForDetailViewController() {
         self.loadIndicator.isHidden = true
         guard let annousement = self.annousements else { return }
         if let annousementParams = annousement.params {

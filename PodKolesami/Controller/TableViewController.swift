@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum HeightForRow {
+    static let height: CGFloat = 500
+}
+
 class TableViewController: UITableViewController {
 
     private var announcements: [DetailedInformation] = []
@@ -65,7 +69,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 500
+        return HeightForRow.height
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,7 +87,6 @@ class TableViewController: UITableViewController {
                 print("Fail!")
             }
         }
-        
         
         cell.titleTV.text = annoucement.title
         cell.textTV.text = annoucement.description
