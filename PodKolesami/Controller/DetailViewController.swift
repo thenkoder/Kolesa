@@ -36,6 +36,8 @@ class DetailViewController: UIViewController {
         loadAnnoucement()
     }
     
+    // MARK: LoadAnnoucement for DetailViewController
+    
     private func loadAnnoucement() {
         guard let url = URL(string: "https://lomiren.kz/intern/advert/2") else { return }
         

@@ -17,6 +17,8 @@ class CollectionViewController: UICollectionViewController {
         loadCategory()
     }
     
+    // MARK: LoadCategory for CollectionViewController
+    
     private func loadCategory() {
         guard let url = URL(string: "https://lomiren.kz/intern/category") else { return }
 
@@ -36,12 +38,19 @@ class CollectionViewController: UICollectionViewController {
         }.resume()
     }
     
-    private func parsingImages(categoryes: Category, cell: CollectionViewCell) {
-        if let ursString = URL(string: categoryes.image ?? "ошибка картинки") {
-            if let imageData = try? Data(contentsOf: ursString) {
-                cell.imageCVC.image = UIImage(data: imageData)
+    // MARK: GetJson
+    
+    private func getJSON(urlPath: String?, completion: @escaping(Data) -> ()) {
+        guard let urlPath = urlPath else { return }
+        guard let url = URL(string: urlPath) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            if let data = data {
+                DispatchQueue.main.async {
+                    completion(data)
+                }
             }
-        }
+        }.resume()
     }
     
     // MARK: UICollectionViewDataSource
@@ -54,7 +63,9 @@ class CollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionViewCell
         let categoryes = category[indexPath.row]
         
-        parsingImages(categoryes: categoryes, cell: cell)
+        getJSON(urlPath: categoryes.image) { data in
+            cell.imageCVC.image = UIImage(data: data)
+        }
         
         cell.textLabel.text = categoryes.title
         return cell

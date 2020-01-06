@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: Enum
+
 enum HeightForRow {
     static let height: CGFloat = 500
 }
@@ -24,12 +26,14 @@ class TableViewController: UITableViewController {
         titleForTableViewController()
     }
     
-    func titleForTableViewController() {
+    private func titleForTableViewController() {
         if let titleInCategor = category {
             self.title = titleInCategor.title
         }
     }
 
+    // MARK: GetJson
+    
     private func getJSON(urlPath: String?, tag: Int, completion: @escaping(Data, Int) -> ()) {
         guard let urlPath = urlPath else { return }
         guard let url = URL(string: urlPath) else { return }
@@ -42,6 +46,8 @@ class TableViewController: UITableViewController {
             }
         }.resume()
     }
+    
+    // MARK: LoadCategory for TableViewController
     
     private func loadCategory() {
         guard let url = URL(string: "https://lomiren.kz/intern/category_adverts/1") else { return }
@@ -80,7 +86,6 @@ class TableViewController: UITableViewController {
         
         cell.imageTV.image = UIImage(named: "preloader")
         getJSON(urlPath: annoucement.image, tag: tag) { data, tag in
-            print("\(tag) \(cell.tag)")
             if cell.tag == tag {
                 cell.imageTV.image = UIImage(data: data)
             } else {

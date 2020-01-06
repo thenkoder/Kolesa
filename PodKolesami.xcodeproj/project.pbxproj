@@ -16,7 +16,6 @@
 		304C4B922397AC5C0058526A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C4B912397AC5C0058526A /* CollectionViewController.swift */; };
 		304C4B962398E7D10058526A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C4B952398E7D10058526A /* CollectionViewCell.swift */; };
 		304C4B98239A25600058526A /* Сategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C4B97239A255F0058526A /* Сategory.swift */; };
-		304C4B9B239A35C10058526A /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C4B9A239A35C10058526A /* Parsing.swift */; };
 		304C4B9F239CF8B10058526A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C4B9E239CF8B10058526A /* TableViewController.swift */; };
 		304C4BA1239CF8DE0058526A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C4BA0239CF8DE0058526A /* TableViewCell.swift */; };
 		304C4BA3239D01EA0058526A /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C4BA2239D01EA0058526A /* Ads.swift */; };
@@ -35,7 +34,6 @@
 		304C4B912397AC5C0058526A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		304C4B952398E7D10058526A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		304C4B97239A255F0058526A /* Сategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Сategory.swift"; sourceTree = "<group>"; };
-		304C4B9A239A35C10058526A /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
 		304C4B9E239CF8B10058526A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = PodKolesami/Controller/TableViewController.swift; sourceTree = SOURCE_ROOT; };
 		304C4BA0239CF8DE0058526A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = PodKolesami/Controller/TableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		304C4BA2239D01EA0058526A /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = SOURCE_ROOT; };
@@ -110,7 +108,6 @@
 			children = (
 				304C4BA2239D01EA0058526A /* Ads.swift */,
 				304C4B97239A255F0058526A /* Сategory.swift */,
-				304C4B9A239A35C10058526A /* Parsing.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,7 +193,6 @@
 				308F140123BCBF9B0072BF77 /* SceneDelegate.swift in Sources */,
 				3014579C23A9F5E70095B21C /* DetailAnnouncement.swift in Sources */,
 				304C4B962398E7D10058526A /* CollectionViewCell.swift in Sources */,
-				304C4B9B239A35C10058526A /* Parsing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

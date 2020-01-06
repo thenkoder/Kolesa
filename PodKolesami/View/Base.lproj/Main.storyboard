@@ -113,9 +113,14 @@
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="181" id="rTe-wc-Gcx"/>
                                             </constraints>
                                         </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="p7i-7O-lhd">
+                                            <rect key="frame" x="177.5" y="190" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="p7i-7O-lhd" firstAttribute="centerX" secondItem="zip-yO-Gzf" secondAttribute="centerX" id="6TG-mJ-KH2"/>
                                         <constraint firstItem="VAG-jj-X8H" firstAttribute="leading" secondItem="zip-yO-Gzf" secondAttribute="leading" constant="20" id="9uV-GU-tZ1"/>
+                                        <constraint firstItem="p7i-7O-lhd" firstAttribute="centerY" secondItem="zip-yO-Gzf" secondAttribute="centerY" id="Drh-JF-YBq"/>
                                         <constraint firstItem="rod-J2-bZP" firstAttribute="leading" secondItem="zip-yO-Gzf" secondAttribute="leading" constant="16" id="E7u-ik-ioe"/>
                                         <constraint firstItem="mRs-dX-JVr" firstAttribute="leading" secondItem="zip-yO-Gzf" secondAttribute="leading" constant="20" id="Kmk-ZP-QhF"/>
                                         <constraint firstAttribute="trailing" secondItem="rod-J2-bZP" secondAttribute="trailing" constant="16" id="SY1-tm-0Ku"/>
@@ -128,6 +133,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="p7i-7O-lhd" id="5pb-BW-lCT"/>
                                     <outlet property="imageTV" destination="rod-J2-bZP" id="DuY-vn-Q4R"/>
                                     <outlet property="textTV" destination="mRs-dX-JVr" id="Twg-uU-UJG"/>
                                     <outlet property="titleTV" destination="VAG-jj-X8H" id="CGr-l6-rCj"/>

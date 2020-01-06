@@ -12,4 +12,5 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var imageTV: UIImageView!
     @IBOutlet weak var titleTV: UILabel!
     @IBOutlet weak var textTV: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 }
